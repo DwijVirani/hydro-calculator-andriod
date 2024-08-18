@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Electricity Bill Calculator!"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="16sp"
+        android:text="Morning Usage (kwh)"/>
+
+    <EditText
+        android:id="@+id/etMrngUsage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Enter Morning usage in Kwh"
+        android:inputType="numberDecimal"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="16sp"
+        android:text="Evening Usage (kwh)"/>
+
+    <EditText
+        android:id="@+id/etEvngUsage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Enter Morning usage in Kwh"
+        android:inputType="numberDecimal"
+        />
+
+    <Switch
+        android:id="@+id/swEnvRebate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Use renewable energy source?"
+        android:textSize="16sp"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="16sp"
+        android:textColor="@color/design_default_color_error"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Calculate"
+            android:backgroundTint="@color/design_default_color_primary_dark"/>
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Reset"
+            android:backgroundTint="@color/design_default_color_error"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvOutputHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_margin="8dp"
+        />
+
+    <TextView
+        android:id="@+id/tvOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:id="@+id/tvFinalAmtOp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:background="@color/material_dynamic_tertiary70"
+        />
+
+</LinearLayout>
